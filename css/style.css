@@ -198,6 +198,25 @@ textarea {
   /* overflow: hidden; */
 }
 
+body.dark-mode .card {
+  background-color: #333;
+  /* dark background color for cards */
+  color: #fff;
+  /* white text color for cards */
+}
+
+body.dark-mode .card .card-title {
+  color: #fff;
+  /* white title color for cards */
+}
+
+body.dark-mode .card .btn {
+  background-color: #444;
+  /* dark background color for buttons */
+  color: #fff;
+  /* white text color for buttons */
+}
+
 .dark-mode {
   background-color: #222;
   color: #fff;
@@ -294,4 +313,72 @@ main {
 main.portfolio {
   width: 75%;
   margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  /* 1 column on small screens */
+  gap: 20px;
+  /* add some gap between grid items */
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+
+  /* medium screen breakpoint */
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns on medium screens */
+  }
+}
+
+@media (min-width: 1200px) {
+
+  /* large screen breakpoint */
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns on large screens */
+  }
+}
+
+.grid-item {
+  background-color: #fff;
+  /* add some background color */
+  padding: 0px;
+  /* add some padding */
+  border: 1px solid #C0C0C0;
+  /* add some border */
+  border-radius: 10px;
+  /* add some border radius */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #23527c;
 }
