@@ -11,6 +11,14 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+@font-face {
+  font-family: 'Digital';
+  src: url('../fonts/Digital.TTF');
+  /* or url('fonts/myfont.ttf') if in a subdirectory */
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   color: #222;
   font-size: 1em;
@@ -198,6 +206,14 @@ textarea {
   /* overflow: hidden; */
 }
 
+.body-calculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
 body.dark-mode .card {
   background-color: #333;
   /* dark background color for cards */
@@ -381,4 +397,32 @@ main.portfolio {
 
 .btn:hover {
   background-color: #23527c;
+}
+
+.calculator {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 250px;
+}
+
+button {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ccc;
+}
+
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
